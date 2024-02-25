@@ -1,11 +1,41 @@
+Vision Braille Project: Bridging Education for Blind Children
+
 # Introduction
- 
-Welcome to Nextra! This is a basic docs template. You can use it as a starting point for your own project :)
 
-## What is Nextra?
+In China, approximately 240,000 children between the ages of 0 and 17 face visual disabilities. Unfortunately, their educational opportunities remain limited to a handful of specialized schools. These schools often struggle to find qualified braille teachers, making education for blind students a challenging endeavor.
 
-A **simple**, **powerful** and **flexible** site generation framework with everything you love from Next.js.
+Recognizing this gap, I embarked on the Vision Braille Project. The project aims to empower blind children by providing an innovative solution: a braille translation website. This platform facilitates communication between traditional schoolteachers and visually impaired students.
 
-## Documentation
+How It Works:
 
-The documentation is available at [https://nextra.site](https://nextra.site).
+- Input Braille Text: Teachers upload written homework or assignments in braille to the website.
+- Instant Translation: The website swiftly translates the braille content into standard text (pinyin or Chinese characters).
+- Accessible Learning: Teachers can now understand and evaluate the work of blind students, fostering inclusive education.
+By bridging this gap, the Vision Braille Project ensures that blind children can learn alongside their sighted peers, unlocking a brighter future for all. 🌟
+
+
+The tesing app is available at [Vision Braille Project](http://154.12.37.165:5000/)
+
+
+# Flowcharts
+```mermaid
+graph TD
+st[Start] --> op1[Input Braille Image]
+op1 --> op2[OCR]
+op2 --> op3[Convert Braille to Pinyin]
+op3 --> op4[Translate Pinyin to Chinese Characters]
+sub1[Challenges during OCR] --> op2
+sub2[Challenges in Chinese Braille Translation] --> op3
+sub3[Challenges in Homophonic Character Handling] --> op4
+op4 --> e[End]
+
+%% Challenges and Solutions
+sub1 --> sol1[Solution: YOLO Neural Network]
+sub2 --> sol2[Solution: Consultation with Professors]
+sub3 --> sol3[Solution: Bidirectional RNNs]
+
+%% Connect Challenges to Solutions
+sol1 --> op2
+sol2 --> op3
+sol3 --> op4
+```
