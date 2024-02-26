@@ -17,25 +17,7 @@ By bridging this gap, the Vision Braille Project ensures that blind children can
 The tesing app is available at [Vision Braille Project](http://154.12.37.165:5000/)
 
 
-# Flowcharts
-```mermaid
-graph TD
-st[Start] --> op1[Input Braille Image]
-op1 --> op2[OCR]
-op2 --> op3[Convert Braille to Pinyin]
-op3 --> op4[Translate Pinyin to Chinese Characters]
-sub1[Challenges during OCR] --> op2
-sub2[Challenges in Chinese Braille Translation] --> op3
-sub3[Challenges in Homophonic Character Handling] --> op4
-op4 --> e[End]
 
-%% Challenges and Solutions
-sub1 --> sol1[Solution: YOLO Neural Network]
-sub2 --> sol2[Solution: Consultation with Professors]
-sub3 --> sol3[Solution: Bidirectional RNNs]
 
-%% Connect Challenges to Solutions
-sol1 --> op2
-sol2 --> op3
-sol3 --> op4
-```
+
+![Flow Chart](.//img/braille-vision-flowchart_new.png)
