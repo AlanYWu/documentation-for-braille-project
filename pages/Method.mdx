@@ -24,8 +24,8 @@ Enables the LSTM to capture long-distance computational relationships.
 $$
 Input gate: i_t = \sigma(W_i h_{t-1} + U_i x_t + b_i)
 Forget gate: (f_t = \sigma(W_f h_{t-1} + U_f x_t + b_f))
-Candidate memory cell: (c_{\tilde{t}} = \tanh(W_c h_{t-1} + U_c x_t + b_c))
-Updated memory cell: (c_t = f_t \odot c_{t-1} + i_t \odot c_{\tilde{t}})
+
+
 Output gate: (o_t = \sigma(W_o h_{t-1} + U_o x_t + b_o))
 Hidden state: (h_t = o_t \odot \tanh(c_t))
 Where:
@@ -37,5 +37,7 @@ $$
 (h_t) represents the hidden state, incorporating all previous states up to time (t).
 (U) and (W) are the weights and biases for each layer.
 
-$[ \begin{align*} \mathbf{i}_t &= \sigma(\mathbf{W}i \mathbf{h}{t-1} + \mathbf{U}_i \mathbf{x}_t + \mathbf{b}_i) \ \mathbf{f}_t &= \sigma(\mathbf{W}f \mathbf{h}{t-1} + \mathbf{U}_f \mathbf{x}_t + \mathbf{b}f) \ \mathbf{c}{t}^{\sim} &= \tanh(\mathbf{W}c \mathbf{h}{t-1} + \mathbf{U}_c \mathbf{x}_t + \mathbf{b}_c) \ \mathbf{c}_t &= \mathbf{f}t \odot \mathbf{c}{t-1} + \mathbf{i}t \odot \mathbf{c}{t}^{\sim} \ \mathbf{o}_t &= \sigma(\mathbf{W}o \mathbf{h}{t-1} + \mathbf{U}_o \mathbf{x}_t + \mathbf{b}_o) \ \mathbf{h}_t &= \mathbf{o}_t \odot \tanh(\mathbf{c}_t) \end{align*} ]$
+
+
+
 
